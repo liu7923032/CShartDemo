@@ -1,0 +1,33 @@
+﻿
+<configuration>
+  <configSections>
+    <section name="unity" type="Microsoft.Practices.Unity.Configuration.UnityConfigurationSection, Microsoft.Practices.Unity.Configuration"/>
+  </configSections>
+  <unity>
+    <sectionExtension type="Microsoft.Practices.Unity.InterceptionExtension.Configuration.InterceptionConfigurationExtension, Microsoft.Practices.Unity.Interception.Configuration"/>
+    <containers>
+      <container name="DefaultContainer">
+        <!--ICategoryService-->
+        <register type="NineEight.IBLL.ICategoryService, NineEight.IBLL" mapTo="NineEight.BLL.CategoryService, NineEight.BLL">
+          <lifetime type="transient" />
+        </register>
+
+        <!--ICommodityService-->
+        <register type="NineEight.IBLL.ICommodityService, NineEight.IBLL" mapTo="NineEight.BLL.CommodityService, NineEight.BLL">
+          <lifetime type="transient" />
+        </register>
+        
+        <!--IDbHelper-->
+        <register type="NineEight.IDAL.IDbHelper, NineEight.IDAL" mapTo="NineEight.DAL.DbHelper, NineEight.DAL">
+          <lifetime type="transient" />
+        </register>
+
+        <!--Cache 单例模式--><!--
+        <register type="NineEight.Common.Cache.ICache, NineEight.Common.Cache" mapTo="NineEight.Common.Cache.RuntimeCache, NineEight.Common.Cache">
+          <lifetime type="containercontrolled" />
+        </register>-->
+        
+      </container>
+    </containers>
+  </unity>
+</configuration>
