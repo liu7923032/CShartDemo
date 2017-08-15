@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<FoodMenu>
+  <Food>
+    <Id>1</Id>
+    <FoodName>Beef</FoodName>
+    <Price>30</Price>
+    <Describe>牛肉</Describe>
+  </Food>
+  <Food>
+    <Id>2</Id>
+    <FoodName>Chop</FoodName>
+    <Price>20</Price>
+    <Describe>红烧排骨</Describe>
+  </Food>
+  <Food>
+    <Id>3</Id>
+    <FoodName>Fish</FoodName>
+    <Price>120</Price>
+    <Describe>酸菜鱼</Describe>
+  </Food>
+
+  <Food>
+    <Id>4</Id>
+    <FoodName>Chicken</FoodName>
+    <Price>33</Price>
+    <Describe>宫保鸡丁</Describe>
+  </Food>
+
+  <Food>
+    <Id>5</Id>
+    <FoodName>Duck</FoodName>
+    <Price>44</Price>
+    <Describe>啤酒鸭</Describe>
+  </Food>
+  
+</FoodMenu>

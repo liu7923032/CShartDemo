@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SouthPerform>
+  <!--属性-->
+  <User>南派祖师</User>
+  <Table>南:四方桌</Table>
+  <Chair>南:长椅子</Chair>
+  <Ruler>南:大尺子</Ruler>
+  <!--起火点-->
+  <Temperature>1000</Temperature>
+  <Events>
+    <Event>南:夫起大呼</Event>
+    <Event>南:妇亦起大呼</Event>
+    <Event>南:两儿齐哭</Event>
+    <Event>南:俄而百千人大呼</Event>
+    <Event>南:百千儿哭</Event>
+    <Event>南:百千犬吠</Event>
+  </Events>
+  <!--收费金额-->
+  <Charge>1400</Charge>
+</SouthPerform>

@@ -1,0 +1,30 @@
+﻿
+<configuration>
+  <configSections>
+    <section name="unity" type="Microsoft.Practices.Unity.Configuration.UnityConfigurationSection, Microsoft.Practices.Unity.Configuration"/>
+  </configSections>
+  <unity>
+    <sectionExtension type="Microsoft.Practices.Unity.InterceptionExtension.Configuration.InterceptionConfigurationExtension, Microsoft.Practices.Unity.Interception.Configuration"/>
+    <containers>
+      <container name="DefaultContainer">
+        <!--IDbHelper-->
+        <register type="NineSix.IDAL.IDbHelper, NineSix.IDAL" mapTo="NineSix.DAL.DbHelper, NineSix.DAL">
+          <lifetime type="transient" />
+        </register>
+
+        <!--IDbHelper-->
+        <register type="NineSix.IDAL.IRepository, NineSix.IDAL" mapTo="NineSix.DAL.BaseRepository, NineSix.DAL">
+          <lifetime type="transient" />
+        </register>
+
+        <!--ICategoryService-->
+        <register type="NineSix.IBLL.ICategoryService, NineSix.IBLL" mapTo="NineSix.BLL.CategoryService, NineSix.BLL">
+          <lifetime type="transient" />
+        </register>
+        
+        
+        
+      </container>
+    </containers>
+  </unity>
+</configuration>

@@ -1,0 +1,19 @@
+﻿
+<configuration>
+  <configSections>
+    <section name="unity" type="Microsoft.Practices.Unity.Configuration.UnityConfigurationSection, Microsoft.Practices.Unity.Configuration"/>
+  </configSections>
+  <unity>
+    <sectionExtension type="Microsoft.Practices.Unity.InterceptionExtension.Configuration.InterceptionConfigurationExtension, Microsoft.Practices.Unity.Interception.Configuration"/>
+    <containers>
+      <container name="DefaultContainer">
+        <extension type="Interception"/>
+        <register type="NineFour.IDAL.ISQLHelper, NineFour.IDAL" mapTo="NineFour.DAL.SQLHelper, NineFour.DAL">
+          <interceptor type="InterfaceInterceptor"/>
+          <interceptionBehavior type="Unity.AOP.ValidateInterception, Unity.AOP"/>
+          <lifetime type="transient" />
+        </register>
+      </container>
+    </containers>
+  </unity>
+</configuration>

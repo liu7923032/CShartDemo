@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<WestPerform>
+  <!--属性-->
+  <User>西派祖师</User>
+  <Table>西:四方桌</Table>
+  <Chair>西:长椅子</Chair>
+  <Ruler>西:大尺子</Ruler>
+  <!--起火点-->
+  <Temperature>400</Temperature>
+  <Events>
+    <Event>西:夫起大呼</Event>
+    <Event>西:妇亦起大呼</Event>
+    <Event>西:两儿齐哭</Event>
+    <Event>西:俄而百千人大呼</Event>
+    <Event>西:百千儿哭</Event>
+    <Event>西:百千犬吠</Event>
+  </Events>
+  <!--收费金额-->
+  <Charge>1300</Charge>
+</WestPerform>

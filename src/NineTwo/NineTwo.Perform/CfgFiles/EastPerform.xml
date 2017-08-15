@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<EastPerform>
+  <!--属性-->
+  <User>东派祖师</User>
+  <Table>东:四方桌</Table>
+  <Chair>东:长椅子</Chair>
+  <Ruler>东:大尺子</Ruler>
+  <!--起火点-->
+  <Temperature>400</Temperature>
+  <Events>
+    <Event>东:夫起大呼</Event>
+    <Event>东:妇亦起大呼</Event>
+    <Event>东:两儿齐哭</Event>
+    <Event>东:俄而百千人大呼</Event>
+    <Event>东:百千儿哭</Event>
+    <Event>东:百千犬吠</Event>
+  </Events>
+  <!--收费金额-->
+  <Charge>700</Charge>
+</EastPerform>

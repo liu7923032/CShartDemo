@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<NorthPerform>
+  <!--属性-->
+  <User>北派祖师</User>
+  <Table>北:四方桌</Table>
+  <Chair>北:长椅子</Chair>
+  <Ruler>北:大尺子</Ruler>
+  <!--起火点-->
+  <Temperature>800</Temperature>
+  <Events>
+    <Event>北:夫起大呼</Event>
+    <Event>北:妇亦起大呼</Event>
+    <Event>北:两儿齐哭</Event>
+    <Event>北:俄而百千人大呼</Event>
+    <Event>北:百千儿哭</Event>
+    <Event>北:百千犬吠</Event>
+  </Events>
+  <!--收费金额-->
+  <Charge>1200</Charge>
+</NorthPerform>

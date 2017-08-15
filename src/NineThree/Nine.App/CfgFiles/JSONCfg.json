@@ -1,0 +1,41 @@
+[
+  {
+    "Name": "乔峰",
+    "Color": "Blue",
+    "Events": [
+      {
+        "EName": "丐帮帮主",
+        "IsFirst": true
+      },
+      { "EName": "契丹人" },
+      { "EName": "南院大王" },
+      { "EName": "挂印离开" }
+    ]
+  },
+  {
+    "Name": "虚竹",
+    "Color": "Yellow",
+    "Events": [
+      {
+        "EName": "小和尚",
+        "IsFirst": true
+      },
+      { "EName": "逍遥掌门" },
+      { "EName": "灵鹫宫宫主" },
+      { "EName": "西夏驸马" }
+    ]
+  },
+  {
+    "Name": "段誉",
+    "Color": "Green",
+    "Events": [
+      {
+        "EName": "钟灵儿",
+        "IsFirst": true
+      },
+      { "EName": "木婉清" },
+      { "EName": "王语嫣" },
+      { "EName": "大理国王" }
+    ]
+  }
+]
