@@ -23,6 +23,12 @@ namespace NineSeven.BLL
           
         }
 
+
+        public int Insert(GM_Commodity entity)
+        {
+           return _dbHelper.Insert<GM_Commodity>(entity, "GM_Commodity_030");
+        }
+
         public void InitDbCommodity()
         {
             #region Delete

@@ -30,7 +30,7 @@ namespace NineSeven.DAL
         /// <typeparam name="T"></typeparam>
         /// <param name="entity"></param>
         /// <returns></returns>
-        public int Insert<T>(T entity) where T : BaseModel
+        public int Insert<T>(T entity, string tableName = "") where T : BaseModel
         {
             //1：构建插入SQL
             Type type = typeof(T);
@@ -38,7 +38,10 @@ namespace NineSeven.DAL
             StringBuilder sbValues = new StringBuilder();
 
             List<SqlParameter> parameters = new List<SqlParameter>();
-
+            if (string.IsNullOrEmpty(tableName))
+            {
+                tableName = type.Name;
+            }
             //排除掉Id
             foreach (var item in type.GetProperties())
             {
@@ -57,7 +60,7 @@ namespace NineSeven.DAL
                 }
             }
 
-            string strSQL = $"Insert into DBO.[{type.Name}] ({sbColumns.ToString().Substring(0, sbColumns.Length - 1)}) Values({sbValues.ToString().Substring(0, sbValues.Length - 1)});";
+            string strSQL = $"Insert into DBO.[{tableName}] ({sbColumns.ToString().Substring(0, sbColumns.Length - 1)}) Values({sbValues.ToString().Substring(0, sbValues.Length - 1)});select @@IDENTITY";
             //2:执行SQL,并返回id
             string result = DbCommand<string>(strSQL, (cmd) =>
                {
@@ -224,7 +227,7 @@ namespace NineSeven.DAL
                       foreach (PropertyInfo p in type.GetProperties())
                       {
                           var value = reader[p.Name];
-                          if (value is  DBNull)
+                          if (value is DBNull)
                           {
                               continue;
                           }

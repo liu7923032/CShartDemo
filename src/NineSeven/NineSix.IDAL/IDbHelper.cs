@@ -10,16 +10,16 @@ namespace NineSeven.IDAL
 {
     public interface IDbHelper
     {
-       
+
         /// <summary>
         /// 增加
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="entity"></param>
-        int Insert<T>(T entity) where T : BaseModel;
+        int Insert<T>(T entity, string tableName = "") where T : BaseModel;
 
         void InsertList<T>(List<T> insertList, string tableName = "") where T : BaseModel;
-      
+
         /// <summary>
         /// 更新
         /// </summary>
@@ -27,7 +27,7 @@ namespace NineSeven.IDAL
         /// <param name="entity"></param>
         void Update<T>(T entity, Dictionary<string, object> changeCols) where T : BaseModel;
 
-        
+
         /// <summary>
         /// 删除
         /// </summary>
@@ -62,7 +62,7 @@ namespace NineSeven.IDAL
         /// <param name="strSQL"></param>
         /// <param name="parameters"></param>
         /// <returns></returns>
-        int ExecuteNonQuery(string strSQL,params SqlParameter[] parameters);
+        int ExecuteNonQuery(string strSQL, params SqlParameter[] parameters);
 
         /// <summary>
         /// 在事物中执行SQL

@@ -33,15 +33,39 @@ namespace NineSeven.HomeWork7
                 #endregion
 
                 #region 2.0 lucene.net 
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine($"*****************lucene.net demo*****************");
                 LuceneTools luceneTools = new LuceneTools(commodityService);
-                luceneTools.InitLucene();
+                //luceneTools.InitLucene();
                 luceneTools.QueryList("Title:asus", new Page() { Sort = "Price" }, "[100,200]");
                 #endregion
 
                 #region 3.0 redis 异步队列
-                //
-
+                //3.1 启动异步队列
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Console.WriteLine($"*****************启动一个异步队列*****************");
+                RedisTools.Current.Start(luceneTools);
+                //3.2 添加一个实体
+                Console.WriteLine($"1.0 添加一个实体到数据");
+                GM_Commodity commodity = new GM_Commodity()
+                {
+                    Title="华硕(asus),测试数据",
+                    ImageUrl="",
+                    Price=150,
+                    ProductId="11",
+                    SkuId="11",
+                    Url="http://www.baidu.com"
+                };
+                int id= commodityService.Insert(commodity);
+                Console.WriteLine($"2.0 添加一个实体到数据库,得到的Id={id}");
+                commodity.Id = id;
+                //将该数据添加到异步队列中
+                Console.WriteLine($"3.0 更新实体到索引中");
+                RedisTools.Current.Add(commodity);
+                //停留2秒中等待redis中的数据更新到index 中
+                Thread.Sleep(2000);
+                Console.WriteLine($"4.0 在查询包含 asus的索引");
+                luceneTools.QueryList("Title:asus", new Page() { Sort = "Price" }, "[100,200]");
                 #endregion
             }
             catch (Exception ex)

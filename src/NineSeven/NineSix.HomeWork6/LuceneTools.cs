@@ -122,7 +122,7 @@ namespace NineSeven.HomeWork7
             //显示查询的结果
             list.ForEach(u =>
             {
-                Console.WriteLine($"Title:{u.Title},Price:{u.Price}");
+                Console.WriteLine($"Id:{u.Id},Title:{u.Title},Price:{u.Price}");
             });
             return list;
         }
@@ -130,7 +130,7 @@ namespace NineSeven.HomeWork7
 
         public void UpdateIndex(GM_Commodity commodity)
         {
-            //
+            _gmLucene.Update(commodity);
         }
     }
 }

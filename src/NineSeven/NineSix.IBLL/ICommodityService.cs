@@ -12,5 +12,7 @@ namespace NineSeven.IBLL
         void InitDbCommodity();
 
         List<GM_Commodity> GetCommodityList(string strSql);
+
+        int Insert(GM_Commodity entity);
     }
 }

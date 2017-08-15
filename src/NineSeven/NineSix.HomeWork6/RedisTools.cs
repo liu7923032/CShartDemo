@@ -18,7 +18,7 @@ namespace NineSeven.HomeWork7
         #region 1.0 工具类的单例实现
         private static RedisTools _current = null;
         private static object lockCurrent = new object();
-        public RedisTools Current
+        public static RedisTools Current
         {
             get
             {
@@ -80,12 +80,11 @@ namespace NineSeven.HomeWork7
                         Console.WriteLine($"当前redis 对象的包含的list集合的数量是{commodityList.Count}");
                         var strList = _rListService.BlockingDequeueItemFromList(listKey, TimeSpan.FromHours(1));
                         //1.将值转换为List集合
-                        List<GM_Commodity> cList = Common.JsonHelper.ToObjList<GM_Commodity>(strList);
+                        GM_Commodity entity = Common.JsonHelper.ToObject<GM_Commodity>(strList);
                         //2.检查索引中是否有该对象,如果有那么就更新索引
-                        cList.ForEach(u =>
-                        {
-                            
-                        });
+                        luceneTools.UpdateIndex(entity);
+                        ////3：更新成功再次查询数据
+                        //luceneTools.QueryList("Title:asus", new Page() { Sort = "Price" }, "[100,200]");
                     }
                     else
                     {
@@ -105,6 +104,7 @@ namespace NineSeven.HomeWork7
             //一个一个对象放入队列中
             _rListService.LPush(listKey, Common.JsonHelper.ToJSON<GM_Commodity>(entity));
         }
+
 
     }
 }
