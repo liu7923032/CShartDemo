@@ -83,37 +83,41 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NineSeven.LuceneNet\NineEight.LuceneNet.csproj">
-      <Project>{294f51ec-658a-411b-887c-11d0a69c2fb0}</Project>
-      <Name>NineEight.LuceneNet</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\NineSeven.Redis\NineEight.Redis.csproj">
-      <Project>{7aa0f365-e183-4063-9068-7c642c253566}</Project>
-      <Name>NineEight.Redis</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\NineSix.BLL\NineEight.BLL.csproj">
+    <ProjectReference Include="..\NineEight.BLL\NineEight.BLL.csproj">
       <Project>{85bee67c-5626-4920-8098-6f8a94638d32}</Project>
       <Name>NineEight.BLL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\NineSix.Common\NineEight.Common.csproj">
+    <ProjectReference Include="..\NineEight.Common\NineEight.Common.csproj">
       <Project>{4bda81b0-1040-48e2-b086-6e017f38e588}</Project>
       <Name>NineEight.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\NineSix.DAL\NineEight.DAL.csproj">
+    <ProjectReference Include="..\NineEight.DAL\NineEight.DAL.csproj">
       <Project>{3e430142-c065-4c79-a62e-7a41d3268890}</Project>
       <Name>NineEight.DAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\NineSix.IBLL\NineEight.IBLL.csproj">
+    <ProjectReference Include="..\NineEight.IBLL\NineEight.IBLL.csproj">
       <Project>{c22d6a2d-fc88-4091-a6a2-d9a0fd34c363}</Project>
       <Name>NineEight.IBLL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\NineSix.IDAL\NineEight.IDAL.csproj">
+    <ProjectReference Include="..\NineEight.IDAL\NineEight.IDAL.csproj">
       <Project>{76584c53-469b-4862-a105-25164eea95b9}</Project>
       <Name>NineEight.IDAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\NineSix.Model\NineEight.Model.csproj">
+    <ProjectReference Include="..\NineEight.LuceneNet\NineEight.LuceneNet.csproj">
+      <Project>{294f51ec-658a-411b-887c-11d0a69c2fb0}</Project>
+      <Name>NineEight.LuceneNet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NineEight.Model\NineEight.Model.csproj">
       <Project>{a2dc687e-4e84-45ac-bdb9-808ee556b4e1}</Project>
       <Name>NineEight.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NineEight.Redis\NineEight.Redis.csproj">
+      <Project>{7aa0f365-e183-4063-9068-7c642c253566}</Project>
+      <Name>NineEight.Redis</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NineEight.WCF\NineEight.WCF.csproj">
+      <Project>{d580a2b5-f97e-414f-acb8-86acf2663e3a}</Project>
+      <Name>NineEight.WCF</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{76584C53-469B-4862-A105-25164EEA95B9}</ProjectGuid>
+    <ProjectGuid>{85BEE67C-5626-4920-8098-6F8A94638D32}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NineEight.IDAL</RootNamespace>
-    <AssemblyName>NineEight.IDAL</AssemblyName>
+    <RootNamespace>NineEight.BLL</RootNamespace>
+    <AssemblyName>NineEight.BLL</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,11 +40,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IDbHelper.cs" />
+    <Compile Include="AppService.cs" />
+    <Compile Include="CategoryService.cs" />
+    <Compile Include="CommodityService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NineSix.Model\NineEight.Model.csproj">
+    <ProjectReference Include="..\NineEight.Common\NineEight.Common.csproj">
+      <Project>{4BDA81B0-1040-48E2-B086-6E017F38E588}</Project>
+      <Name>NineEight.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NineEight.IBLL\NineEight.IBLL.csproj">
+      <Project>{c22d6a2d-fc88-4091-a6a2-d9a0fd34c363}</Project>
+      <Name>NineEight.IBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NineEight.IDAL\NineEight.IDAL.csproj">
+      <Project>{76584c53-469b-4862-a105-25164eea95b9}</Project>
+      <Name>NineEight.IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NineEight.Model\NineEight.Model.csproj">
       <Project>{a2dc687e-4e84-45ac-bdb9-808ee556b4e1}</Project>
       <Name>NineEight.Model</Name>
     </ProjectReference>

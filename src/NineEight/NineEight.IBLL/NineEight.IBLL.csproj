@@ -46,11 +46,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NineSix.Common\NineEight.Common.csproj">
+    <ProjectReference Include="..\NineEight.Common\NineEight.Common.csproj">
       <Project>{4BDA81B0-1040-48E2-B086-6E017F38E588}</Project>
       <Name>NineEight.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\NineSix.Model\NineEight.Model.csproj">
+    <ProjectReference Include="..\NineEight.Model\NineEight.Model.csproj">
       <Project>{A2DC687E-4E84-45AC-BDB9-808EE556B4E1}</Project>
       <Name>NineEight.Model</Name>
     </ProjectReference>

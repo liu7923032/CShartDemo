@@ -45,11 +45,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NineSix.IDAL\NineEight.IDAL.csproj">
+    <ProjectReference Include="..\NineEight.IDAL\NineEight.IDAL.csproj">
       <Project>{76584c53-469b-4862-a105-25164eea95b9}</Project>
       <Name>NineEight.IDAL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\NineSix.Model\NineEight.Model.csproj">
+    <ProjectReference Include="..\NineEight.Model\NineEight.Model.csproj">
       <Project>{a2dc687e-4e84-45ac-bdb9-808ee556b4e1}</Project>
       <Name>NineEight.Model</Name>
     </ProjectReference>

@@ -75,11 +75,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NineSix.Common\NineEight.Common.csproj">
+    <ProjectReference Include="..\NineEight.Common\NineEight.Common.csproj">
       <Project>{4bda81b0-1040-48e2-b086-6e017f38e588}</Project>
       <Name>NineEight.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\NineSix.Model\NineEight.Model.csproj">
+    <ProjectReference Include="..\NineEight.Model\NineEight.Model.csproj">
       <Project>{a2dc687e-4e84-45ac-bdb9-808ee556b4e1}</Project>
       <Name>NineEight.Model</Name>
     </ProjectReference>
